@@ -1,19 +1,24 @@
 <div class="ui tiny inverted menu">
-  <a class="active item">
-    <i class="coffee icon"></i> Chatroom
+  <%= link_to "Chatroom", root_path, class: "item" %>
+    
   </a>
   <a class="item">
     <i class="rocketchat large icon"></i> Messages
   </a>
   <div class="right menu">
+    <% if logged_in? %>
     <div class="ui dropdown item">
       Account <i class="dropdown icon"></i>
       <div class="menu">
-        <a class="item">Log out</a>
-        <%= link_to "Log in", login_path, class: "item" %>
+        <%= link_to "Logout", logout_path, method: :delete, class: "item" %>
         <a class="item">Sign up</a>
       </div>
     </div>
+    <% else %>
+      <div class="item">
+        <%= link_to "Sign in", login_path, class: "ui green button" %>
+      </div>
+    <% end %>
     <div class="item">
         <div class="ui orange button">Sign Up</div>
     </div>
