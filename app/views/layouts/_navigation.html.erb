@@ -19,8 +19,10 @@
         <%= link_to "Sign in", login_path, class: "ui green button" %>
       </div>
     <% end %>
+    <% if !logged_in? %>
     <div class="item">
         <div class="ui orange button">Sign Up</div>
     </div>
+    <% end %>
   </div>
 </div>
