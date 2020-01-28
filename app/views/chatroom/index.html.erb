@@ -12,12 +12,10 @@
                 </div>
             </div>
             <div class="extra content">
-            <div class="twelve wide column">
-            </div>
-                <div class="ui fluid action input">
-                    <input type="text" placeholder="Your message...">
-                    <button class="ui orange button">Send message</button>
-                </div>
+            <%= form_for(@message, html:{class: "ui fluid action input", role: "form"}, url: message_path) do |f| %>
+                    <%=f.text_field :body, placeholder: "your message...", class: ""%>
+                    <%= f.button "Send message",class: "ui orange button" %>
+            <% end %>
             </div>
         </div>
     </div>
