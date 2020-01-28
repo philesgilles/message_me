@@ -19,6 +19,13 @@ div.menu {
   height: 450px;
 }
 
+#messages {
+  height: 15em;
+  overflow: auto;
+}
+.ui.feed > .event {
+  padding: 0 !important;
+}
 .text-orange {
   color: #f2711c;
 }

@@ -14,6 +14,6 @@ class MessagesController < ApplicationController
         params.require(:message).permit(:body)
     end
     def message_render(message)
-        render(partial: 'message', locals: {message: message})
+        render(partial: 'message', locals: {message: message, session: session})
     end
 end
