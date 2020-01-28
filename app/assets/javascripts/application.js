@@ -26,7 +26,6 @@ const scrollBottom = () => {
 const submitMessage = () => {
   $("#message_body").on("keydown", e => {
     if (e.keyCode == 13) {
-      console.log("aaa");
       $("button").click();
       e.target.value = "";
     }
